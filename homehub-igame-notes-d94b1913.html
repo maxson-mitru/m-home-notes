@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 稳定入口与平台介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1.25rem;
+        }
+
+        .container {
+            max-width: 760px;
+            width: 100%;
+            margin: 2.5rem auto;
+        }
+
+        /* Hero */
+        .hero {
+            margin-bottom: 3.75rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 540px;
+            margin: 0 auto 0.5rem auto;
+        }
+
+        .hero .version-tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #334155;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.9rem;
+            border-radius: 20px;
+            margin-top: 0.8rem;
+        }
+
+        /* 优势区 */
+        .strengths {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .strength-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.5rem 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            transition: box-shadow 0.2s;
+        }
+
+        .strength-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .strength-item h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .strength-item p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        /* 说明区（含链接句子） */
+        .explain {
+            background: #ffffff;
+            border: 1px solid #eef2f6;
+            border-radius: 16px;
+            padding: 2rem 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .explain h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .explain p {
+            margin-bottom: 1.1rem;
+            color: #334155;
+            font-size: 1rem;
+        }
+
+        .explain .link-sentence {
+            background: #f8fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            border-left: 3px solid #94a3b8;
+            margin: 1.5rem 0 0.25rem;
+            font-size: 1rem;
+        }
+
+        .explain .link-sentence a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .explain .link-sentence a:hover {
+            border-bottom: 1px solid #1d4ed8;
+            color: #0f172a;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin-bottom: 3rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            color: #0f172a;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e9edf3;
+            padding: 0.9rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1e293b;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            margin-top: 0.15rem;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.8rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer-links a {
+            color: #475569;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .footer-links a:hover {
+            border-bottom: 1px solid #475569;
+            color: #0f172a;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.8rem;
+            padding-bottom: 2.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .container {
+                margin: 1.8rem auto;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .strengths {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .explain {
+                padding: 1.5rem 1.2rem;
+            }
+            .faq-item {
+                padding: 0.75rem 0;
+            }
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- hero -->
+        <section class="hero">
+            <h1>爱游戏</h1>
+            <p class="sub">稳定入口 · 清晰导航 · 专注体验</p>
+            <span class="version-tag">持续迭代 · 一致路径</span>
+        </section>
+
+        <!-- 优势区 -->
+        <section class="strengths">
+            <div class="strength-item">
+                <h3>稳定结构</h3>
+                <p>页面布局与入口长期维护，减少路径变动带来的认知负担。</p>
+            </div>
+            <div class="strength-item">
+                <h3>信息前置</h3>
+                <p>关键说明与导航提示集中展示，降低寻找成本，提升效率。</p>
+            </div>
+            <div class="strength-item">
+                <h3>克制呈现</h3>
+                <p>聚焦游戏相关资源说明，避免过度营销式信息堆砌。</p>
+            </div>
+            <div class="strength-item">
+                <h3>适配查阅</h3>
+                <p>文字与页面结构兼顾移动端与桌面端，阅读体验一致。</p>
+            </div>
+        </section>
+
+        <!-- 说明区：从稳定入口和页面说明角度 -->
+        <section class="explain">
+            <h2>关于入口与页面说明</h2>
+            <p>对于长期使用的平台而言，入口的稳定性与页面的可读性直接影响日常操作效率。<strong>爱游戏</strong> 所依托的主站采用统一路径结构，各分区栏目保持相对固定的命名与层级，方便用户通过书签或直接记忆进行访问。</p>
+            <p>页面内容以模块化方式组织，从概览到细分说明均有对应的区域指引。无论是首次了解还是回访查阅，均可在页面内快速定位信息段落。以下是一个包含主站链接的自然表述：</p>
+            <div class="link-sentence">
+                若需访问主站，可通过稳定域名 <a href="https://homehub-igame.com">爱游戏</a> 直接进入，该地址长期有效且不受短期活动页面影响。
+            </div>
+            <p style="margin-top: 1.2rem;">同时，页面底部提供辅助链接，涵盖相关资源索引与常见问题摘要，形成从顶部导航到底部补充的完整信息闭环。</p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section class="faq-summary">
+            <h2>常见问题摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">Q: 如何确认当前访问的是正式站点？</div>
+                <div class="faq-a">请核对浏览器地址栏是否显示为 homehub-igame.com，并确认页面标题包含「爱游戏」标识。建议将主站添加至书签。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 页面内容更新频率如何？</div>
+                <div class="faq-a">说明类与导航类内容按需迭代，入口信息始终保持最新。功能更新会提前在站内公告区域说明。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q: 是否有针对不同设备的优化？</div>
+                <div class="faq-a">页面采用响应式设计，在手机、平板及桌面浏览器中均可获得清晰排版。如遇显示问题，可尝试刷新或更换浏览器。</div>
+            </div>
+        </section>
+
+        <!-- 底部链接 -->
+        <footer class="footer-links">
+            <a href="https://homehub-igame.com">爱游戏</a>
+            <a href="#">使用说明</a>
+            <a href="#">更新日志</a>
+            <a href="#">常见问题</a>
+            <a href="#">联系方式</a>
+        </footer>
+        <div class="footer-note">
+            © 爱游戏 · 稳定入口
+        </div>
+    </div>
+</body>
+</html>
